@@ -34,6 +34,7 @@ export default function SignIn() {
     user.forEach((el) => {
       if (el === data.email) {
         dispatch(isLoggedIn(true));
+        localStorage.setItem("users", JSON.stringify(data));
         navigate("/");
       } else {
         setErrorSignIn(true);
