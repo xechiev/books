@@ -12,6 +12,7 @@ import SignIn from "./components/signIn/SignIn";
 import SignUp from "./components/signUp/SignUp";
 import Page404 from "./components/404/Page404";
 
+import { isLoggedIn } from "./redux/reducers/UserSlice";
 import { fetchBooks } from "./redux/reducers/BooksSlice";
 
 import "antd/dist/antd.css";
@@ -21,6 +22,9 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (localStorage.getItem("users")) {
+      dispatch(isLoggedIn(true));
+    }
     dispatch(fetchBooks());
   }, [dispatch]);
 

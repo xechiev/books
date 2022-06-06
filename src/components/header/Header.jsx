@@ -15,6 +15,7 @@ const Header = () => {
   };
 
   const logoutUser = () => {
+    localStorage.removeItem("users");
     dispatch(isLoggedIn(false));
     dispatch(toggleBooks(null));
   };

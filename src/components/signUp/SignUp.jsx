@@ -41,6 +41,7 @@ export default function SignUp() {
     };
 
     localStorage.setItem(obj.email, JSON.stringify(obj));
+    localStorage.setItem("users", JSON.stringify(obj));
     dispatch(isLoggedIn(true));
     setTimeout(() => {
       navigate("/");

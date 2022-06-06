@@ -8,6 +8,7 @@ import Spinner from "../../components/UI/spin/Spin";
 import {
   deleteBook,
   fetchBook,
+  fetchBooks,
   toggleBooks,
 } from "../../redux/reducers/BooksSlice";
 
@@ -35,6 +36,7 @@ const BookPost = () => {
   const deleteArticle = () => {
     dispatch(deleteBook(bookID));
     confirm();
+    dispatch(fetchBooks());
     setTimeout(() => {
       navigate("/");
     }, 1500);
