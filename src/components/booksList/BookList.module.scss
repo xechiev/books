@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+  margin-left: 3%;
 }
 
 .book {
@@ -13,7 +14,6 @@
   margin-bottom: 26px;
 }
 
-.select {
-  margin-left: 14.5%;
-  margin-top: 20px;
+ul {
+  padding-left: 0;
 }

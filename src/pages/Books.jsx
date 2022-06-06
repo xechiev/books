@@ -8,7 +8,6 @@ import { sortByTitle, sortByPublishedDate } from "../redux/reducers/BooksSlice";
 const Books = () => {
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.booksReducer.books);
 
   const onSort = (sort) => {
     if (sort === "publishedDate") dispatch(sortByPublishedDate());
@@ -24,7 +23,7 @@ const Books = () => {
     >
       <div
         style={{
-          marginLeft: "5%",
+          marginLeft: "6.5%",
           marginTop: "2%",
         }}
       >
@@ -38,7 +37,6 @@ const Books = () => {
           ]}
         />
       </div>
-
       <BookList />
     </div>
   );

@@ -2,13 +2,10 @@ import React, { useState } from "react";
 import style from "./BookList.module.scss";
 import Book from "../book/Book";
 import { useSelector } from "react-redux";
-
-import Select from "../UI/select/Select";
 import Spinner from "../UI/spin/Spin";
 
 const BookList = () => {
-  const books = useSelector((state) => state.booksReducer.books);
-  const status = useSelector((state) => state.booksReducer.status);
+  const { books, status } = useSelector((state) => state.booksReducer);
 
   return (
     <div className={style.wrapper}>
