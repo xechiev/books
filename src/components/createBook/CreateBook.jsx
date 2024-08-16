@@ -26,8 +26,7 @@ const CreateBook = () => {
   const {
     register,
     formState: { errors },
-    handleSubmit,
-    control,
+    handleSubmit
   } = useForm({
     resolver: yupResolver(SignupSchema),
   });
